@@ -1,0 +1,63 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: JetBrainsMono NFP;
+	font-size: 14px;
+	min-height: 24px;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+#workspaces {
+	margin-top: 20px;
+	margin-left: 20px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	background: #232136;
+}
+#workspaces button {
+	color: #e0def4;
+	transition: none;
+	background: transparent;
+}
+
+#workspaces button.active {
+	background: #56526e;
+}
+
+window#waybar.empty #window {
+	background: transparent;
+}
+
+#window {
+	margin-top: 20px;
+	margin-right: 40px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	color: #e0def4;
+	background: #232136;
+}
+
+
+
+.modules-right {
+	margin-top: 20px;
+	margin-right: 20px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	color: #e0def4;
+	background: #232136;
+}
+
+
