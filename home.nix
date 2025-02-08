@@ -95,6 +95,7 @@
 	cava
 	vesktop
 	gamescope
+	nnn
         #neovim
       ];
 
