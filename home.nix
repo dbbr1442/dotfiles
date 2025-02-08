@@ -94,6 +94,7 @@
 	winetricks
 	cava
 	vesktop
+	gamescope
         #neovim
       ];
 
@@ -140,8 +141,8 @@
         		['<Up>'] = cmp.mapping.select_prev_item(),
         		['<Esc>'] = cmp.mapping.abort(),
 
-			['<C-f>'] = cmp_action.luasnip_jump_forward(),
-        		['<C-b>'] = cmp_action.luasnip_jump_backward(),
+			--['<C-f>'] = cmp_action.luasnip_jump_forward(),
+        		--['<C-b>'] = cmp_action.luasnip_jump_backward(),
 
 			})
 		'';
@@ -189,6 +190,8 @@
 	home.file.".config/cava/config".source = ./home/config/cava/config;
 
 	home.file.".config/wofi/style.css".source = ./home/config/wofi/style.css;
+	
+	home.file.".config/xdg-desktop-portal/hyprland-portals.conf".source = ./home/config/xdg-desktop-portal/hyprland-portals.conf;
 	#programs.fish.functions.fish_prompt = {
 #	body = ''
 #

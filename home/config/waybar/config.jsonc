@@ -12,7 +12,7 @@
     },
     "temperature": {
 	"interval": 30,
-	"thermal-zone": 2,
+	"thermal-zone": 4,
 	"format": "CPU {temperatureC}°C     "
     },
     "memory": {
