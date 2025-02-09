@@ -1,14 +1,15 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "clock"],
+    "modules-center": ["mpris", "cava"],
     "modules-right": ["pulseaudio","memory","temperature","cpu", "tray","clock"],
+    "mpris": {
+	"format": "▶ {dynamic}",
+	"format-paused": "⏸ {dynamic}",
+	"ignored-players": ["firefox"]
+    },
     "clock": {
 	"format": "    {:%b, %d — %H:%M}"
-    },
-    "hyprland/window": {
-	"seperate-outputs": true,
-	"max-length": 180,
     },
     "temperature": {
 	"interval": 30,
@@ -28,6 +29,29 @@
     },
     "tray": {
 	"spacing": 4
+    }
+
+"cava": {
+//        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 100,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
     }
 }
 

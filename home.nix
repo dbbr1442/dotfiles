@@ -67,10 +67,10 @@
 	    enable = true;
 	    shellAliases = {
 		    "neofetch" = "hyfetch";
+		    "nnn" = "nnn -H";
+		    "n" = "n -H";
 	    };
-	    shellInit = ''
-		set -x NNN_OPTS = "H"
-	'';
+	    
 	};
 	
     nixpkgs.config = {

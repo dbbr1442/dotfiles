@@ -1,4 +1,8 @@
-* {
+@import "./rose-pine-moon.css";
+
+
+
+/** {
 	border: none;
 	border-radius: 0;
 	font-family: JetBrainsMono NFP;
@@ -58,6 +62,6 @@ window#waybar.empty #window {
 	transition: none;
 	color: #e0def4;
 	background: #232136;
-}
+}*/
 
 
