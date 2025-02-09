@@ -210,6 +210,8 @@ programs.steam.enable = true;
 	waybar
 	waybar-mpris
 	networkmanagerapplet
+	slurp
+	grim
 	#wine-staging
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
