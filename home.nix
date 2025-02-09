@@ -68,6 +68,9 @@
 	    shellAliases = {
 		    "neofetch" = "hyfetch";
 	    };
+	    shellInit = ''
+		set -x NNN_OPTS = "H"
+	'';
 	};
 	
     nixpkgs.config = {
@@ -96,6 +99,7 @@
 	vesktop
 	gamescope
 	nnn
+	ouch
         #neovim
       ];
 
@@ -187,6 +191,7 @@
       home.file.".config/waybar/style.css".source = ./home/config/waybar/style.css;
 
 	home.file.".config/fish/functions/fish_prompt.fish".source = ./home/config/fish/functions/fish-prompt.fish;
+	home.file.".config/fish/functions/n.fish".source = ./home/config/fish/functions/n.fish;
 
 	home.file.".config/cava/config".source = ./home/config/cava/config;
 
