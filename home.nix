@@ -67,8 +67,6 @@
 	    enable = true;
 	    shellAliases = {
 		    "neofetch" = "hyfetch";
-		    "nnn" = "nnn -H";
-		    "n" = "n -H";
 	    };
 	    
 	};
@@ -189,6 +187,7 @@
 
       home.file.".config/waybar/config.jsonc".source = ./home/config/waybar/config.jsonc;
       home.file.".config/waybar/style.css".source = ./home/config/waybar/style.css;
+      home.file.".config/waybar/rose-pine-moon.css".source = ./home/config/waybar/rose-pine-moon.css;
 
 	home.file.".config/fish/functions/fish_prompt.fish".source = ./home/config/fish/functions/fish-prompt.fish;
 	home.file.".config/fish/functions/n.fish".source = ./home/config/fish/functions/n.fish;

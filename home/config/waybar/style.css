@@ -1,67 +1,101 @@
 @import "./rose-pine-moon.css";
 
-
-
-/** {
-	border: none;
-	border-radius: 0;
+* {
+	border-radius: 10px;
 	font-family: JetBrainsMono NFP;
 	font-size: 14px;
 	min-height: 24px;
 }
 
+
+
 window#waybar {
 	background: transparent;
 }
 
-#workspaces {
+#clocktray {
 	margin-top: 20px;
 	margin-left: 20px;
-	padding-left: 16px;
-	padding-right: 16px;
+	margin-right: 5px;
+	padding-left: 12px;
+	padding-right: 5px;
 	margin-bottom: 0;
 	border-radius: 10px;
 	transition: none;
-	background: #232136;
+	background: @base;
+
 }
+
+#workspaces {
+	margin-top: 20px;
+	margin-left: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	background: @base;
+	color: @overlay;
+}
+
+#pulseaudio {
+	margin-top: 20px;
+	margin-right: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	background: @base;
+	color: @love;
+}
+
+#performance {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	background: @base;
+}
+
+#clock {
+	color: @gold;
+}
+
+#memory {
+	border-right: 1px solid @overlay;
+	border-radius: 10px 0 0 10px;
+	color: @foam;
+}
+
+#tray {
+	padding-right: 10px;
+	border-right: 1px solid @overlay;
+	border-radius: 10px 0 0 10px;
+}
+
+#temperature {
+	border-right: 1px solid @overlay;
+	border-radius: 10px 0 0 10px;
+	color: @rose;
+}
+
+#cpu {
+	color: @iris;
+}
+
 #workspaces button {
-	color: #e0def4;
+	color: @muted;
 	transition: none;
 	background: transparent;
 }
 
 #workspaces button.active {
-	background: #56526e;
+	color: @text;
 }
-
-window#waybar.empty #window {
-	background: transparent;
-}
-
-#window {
-	margin-top: 20px;
-	margin-right: 40px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 10px;
-	transition: none;
-	color: #e0def4;
-	background: #232136;
-}
-
-
-
-.modules-right {
-	margin-top: 20px;
-	margin-right: 20px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 0;
-	border-radius: 10px;
-	transition: none;
-	color: #e0def4;
-	background: #232136;
-}*/
 
 
