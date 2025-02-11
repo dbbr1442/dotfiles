@@ -1,35 +1,37 @@
+@import "./rose-pine-moon.css";
+
 window {
     margin: 0px;
     background-color: #232136;
-    border-radius: 0px;
-    border: 2px solid #eb6f92;
-    color: #e0def4;
+    border-radius: 10px;
+    border: 2px solid @rose; /*eb6f92*/
+    color: @text;
     font-family: 'JetBrainsMono NFP';
-    font-size: 20px;
+    font-size: 14px;
 }
 
 #input {
     margin: 5px;
     border-radius: 0px;
     border: none;
-    border-radius: 0px;;
-    color: #eb6f92;
-    background-color: #393552;
+    border-radius: 0px;
+    color: @text;
+    background-color: @base;
     
 }
 
 #inner-box {
     margin: 5px;
     border: none;
-    background-color: #393552;
-    color: #232136;
+    background-color: @base;
+    color: @text;
     border-radius: 0px;
 }
 
 #outer-box {
     margin: 15px;
     border: none;
-    background-color: #232136;
+    background-color: @base;
 }
 
 #scroll {
@@ -40,19 +42,19 @@ window {
 #text {
     margin: 5px;
     border: none;
-    color: #e0def4;
+    color: @text;
 } 
 
 #entry:selected {
-    background-color: #eb6f92;
-    color: #232136;
+    background-color: @overlay;
+    color: @text;
     border-radius: 0px;;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #eb6f92;
-    color: #232136;
+    background-color: @overlay;
+    color: @text;
     border-radius: 0px;;
     outline: none;
 }
