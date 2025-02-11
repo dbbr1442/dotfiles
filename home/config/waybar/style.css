@@ -23,6 +23,7 @@ window#waybar {
 	border-radius: 10px;
 	transition: none;
 	background: @base;
+	border: 2px solid @rose;
 
 }
 
@@ -36,6 +37,7 @@ window#waybar {
 	transition: none;
 	background: @base;
 	color: @overlay;
+	border: 2px solid @rose;
 }
 
 #pulseaudio {
@@ -48,6 +50,7 @@ window#waybar {
 	transition: none;
 	background: @base;
 	color: @love;
+	border: 2px solid @rose;
 }
 
 #performance {
@@ -60,6 +63,7 @@ window#waybar {
 	border-radius: 10px;
 	transition: none;
 	background: @base;
+	border: 2px solid @rose;
 }
 
 #clock {
