@@ -195,6 +195,7 @@
 	home.file.".config/cava/config".source = ./home/config/cava/config;
 
 	home.file.".config/wofi/style.css".source = ./home/config/wofi/style.css;
+	home.file.".config/wofi/config".source = ./home/config/wofi/config;
 	
 	home.file.".config/xdg-desktop-portal/hyprland-portals.conf".source = ./home/config/xdg-desktop-portal/hyprland-portals.conf;
 	#programs.fish.functions.fish_prompt = {
