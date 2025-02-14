@@ -66,6 +66,7 @@
 	    shellAliases = {
 		    "neofetch" = "hyfetch";
 	    };
+	    shellInit = "set -x EDITOR nvim";
 	    
 	};
 	
@@ -131,7 +132,7 @@
 
 	home.file.".config/fish/functions/fish_prompt.fish".source = ./home/config/fish/functions/fish-prompt.fish;
 	home.file.".config/fish/functions/n.fish".source = ./home/config/fish/functions/n.fish;
-	home.file.".config/fish/config.fish".source = ./home/config/fish/config.fish;
+	#home.file.".config/fish/config.fish".source = ./home/config/fish/config.fish;
 
 	home.file.".config/cava/config".source = ./home/config/cava/config;
 
