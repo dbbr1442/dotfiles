@@ -47,19 +47,19 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 --        }
 --    end,
 --
---    ["lua_ls"] = function()
---        require('neodev').setup()
---        require('lspconfig').lua_ls.setup {
---            on_attach = on_attach,
---            capabilities = capabilities,
---            settings = {
---                Lua = {
---                    workspace = { checkThirdParty = false },
---                    telemetry = { enable = false },
---                },
---            }
---        }
---    end
+    ["lua_ls"] = function()
+        require('neodev').setup()
+        require('lspconfig').lua_ls.setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            settings = {
+                Lua = {
+                    workspace = { checkThirdParty = false },
+                    telemetry = { enable = false },
+                },
+            }
+        }
+    end
 
     -- another example
     -- ["omnisharp"] = function()
