@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-    imports = [ inputs.nixvim.homeManagerModules.nixvim ];
+    #imports = [ inputs.nixvim.homeManagerModules.nixvim ];
 	# Home Manager needs a bit of information about you and the paths it should
 	# manage.
 	home.username = "lucy";
@@ -50,9 +50,7 @@
 	#
 	#  /etc/profiles/per-user/lucy/etc/profile.d/hm-session-vars.sh
 	#
-	home.sessionVariables = {
-		EDITOR = "nvim";
-	};
+	
 
 	# Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
@@ -108,7 +106,7 @@
 
 	plugins = [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ];
 	extraPackages = with pkgs; [ lua-language-server rust-analyzer ];
-      }
+      };
 
  #     services.hyprpaper = {
 #		enable = true;
@@ -133,6 +131,7 @@
 
 	home.file.".config/fish/functions/fish_prompt.fish".source = ./home/config/fish/functions/fish-prompt.fish;
 	home.file.".config/fish/functions/n.fish".source = ./home/config/fish/functions/n.fish;
+	home.file.".config/fish/config.fish".source = ./home/config/fish/config.fish;
 
 	home.file.".config/cava/config".source = ./home/config/cava/config;
 
