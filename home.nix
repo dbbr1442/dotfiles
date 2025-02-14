@@ -51,7 +51,7 @@
 	#  /etc/profiles/per-user/lucy/etc/profile.d/hm-session-vars.sh
 	#
 	home.sessionVariables = {
-		# EDITOR = "emacs";
+		EDITOR = "nvim";
 	};
 
 	# Let Home Manager install and manage itself.
@@ -77,7 +77,6 @@
 
 	home.packages = with pkgs; [
 	    yt-dlp
-	    #discord
 	    neofetch
 	    hyfetch
 	    audacious
@@ -98,71 +97,18 @@
 	gamescope
 	nnn
 	ouch
-        #neovim
       ];
 
-      programs.nixvim.enable = true;
+      #environment.variables.EDITOR = "nvim";
 
-      programs.nixvim = {
-	extraConfigLua = ''vim.opt.clipboard="unnamedplus"'';
-      
-      	colorschemes.rose-pine = {
-		enable = true;
-		settings = {
-			dark_variant = "moon";
-			#transparency = true;
-			styles = { bold = true; italic = true; transparency = true; };
-		};
-	};
+      programs.neovim = {
+	enable = true;
+	viAlias = true;
+	vimAlias = true;
 
-	plugins.treesitter = { enable = true; };
-	plugins.cmp = { 
-		enable = true;
-		autoEnableSources = true;
-		settings.sources = [
-			{ name = "nvim_lsp"; }
-			{ name = "path"; }
-			{ name = "cmdline"; }
-			{ name = "luasnip"; }
-		];
-		settings.mapping.__raw = ''
-			cmp.mapping.preset.insert({
-			["<Tab>"] = cmp.mapping(function(fallback)
-            		-- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
-            		if cmp.visible() then
-                		local entry = cmp.get_selected_entry()
-                		if not entry then
-                    			cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-                		end
-                		cmp.confirm()
-            		else
-                		fallback()
-            		end
-        		end, {"i","s","c",}),
-
-        		['<Down>'] = cmp.mapping.select_next_item(),
-        		['<Up>'] = cmp.mapping.select_prev_item(),
-        		['<Esc>'] = cmp.mapping.abort(),
-
-			--['<C-f>'] = cmp_action.luasnip_jump_forward(),
-        		--['<C-b>'] = cmp_action.luasnip_jump_backward(),
-
-			})
-		'';
-		settings.snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
-	};
-	plugins.cmp-cmdline.enable = true;
-	plugins.cmp-nvim-lsp.enable = true;
-	plugins.lsp = { 
-		enable = true;
-		servers = {
-			clangd.enable = true;
-			lua_ls.enable = true;
-		};
-	};
-	plugins.luasnip.enable = true;
-
-      };
+	plugins = [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ];
+	extraPackages = with pkgs; [ lua-language-server rust-analyzer ];
+      }
 
  #     services.hyprpaper = {
 #		enable = true;
@@ -174,10 +120,6 @@
 #		};
 	#
       #};
-
-      ####todo 
-      #source ~/.config/waybar/config.jsonrc so its managed by hm
-      #fix nixvim
 
       home.file.".config/kitty/kitty.conf".source = ./home/config/kitty/kitty.conf;
       home.file.".config/kitty/rose-pine-moon.conf".source = ./home/config/kitty/rose-pine-moon.conf;
@@ -198,6 +140,8 @@
 	home.file.".config/wofi/config".source = ./home/config/wofi/config;
 	
 	home.file.".config/xdg-desktop-portal/hyprland-portals.conf".source = ./home/config/xdg-desktop-portal/hyprland-portals.conf;
+
+	home.file.".config/nvim" = { source = ./home/config/nvim; recursive = true; };
 	#programs.fish.functions.fish_prompt = {
 #	body = ''
 #

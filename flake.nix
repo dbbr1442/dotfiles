@@ -5,12 +5,6 @@
 		home-manager.url = "github:nix-community/home-manager/master";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-        nixvim = {
-          url = "github:nix-community/nixvim/main";
-          inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-
 	};
 	outputs = { self, nixpkgs, ... }@inputs: 
 		let
@@ -34,15 +28,5 @@
 				];
 			};
 		};
-		#homeConfigurations = {
-		#	lucy = home-manager.lib.homeManagerConfiguration {
-		#		inherit pkgs;
-		#		modules = [ ./home.nix ];
-		#	};
-		#};
-		#packages = {
-		#	inherit nvim;
-		#	default = nvim;
-		#};
 	};
 }
