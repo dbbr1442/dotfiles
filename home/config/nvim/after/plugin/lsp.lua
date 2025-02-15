@@ -28,6 +28,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- no mason
  require('lspconfig').lua_ls.setup {
+     require("neodev").setup(),
      on_attach = on_attach,
      capabilities = capabilities,
      Lua = {
@@ -36,30 +37,21 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
      },
  }
 
--- mason
---require("mason").setup()
---require("mason-lspconfig").setup_handlers({
---
---    function(server_name)
---        require("lspconfig")[server_name].setup {
---            on_attach = on_attach,
---            capabilities = capabilities
---        }
---    end,
---
-    ["lua_ls"] = function()
-        require('neodev').setup()
-        require('lspconfig').lua_ls.setup {
-            on_attach = on_attach,
-            capabilities = capabilities,
-            settings = {
-                Lua = {
-                    workspace = { checkThirdParty = false },
-                    telemetry = { enable = false },
-                },
-            }
+ require("lspconfig").rust_analyzer.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = { ["rust_analyzer"] = {
+        diagnostics = {
+            enable = false
         }
-    end
+    }}
+}
+
+ require("lspconfig").clangd.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+ }
+
 
     -- another example
     -- ["omnisharp"] = function()

@@ -106,7 +106,7 @@
 	vimAlias = true;
 
 	plugins = [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ];
-	extraPackages = with pkgs; [ lua-language-server rust-analyzer ];
+	extraPackages = with pkgs; [ lua-language-server rust-analyzer clang-tools ];
       };
 
  #     services.hyprpaper = {
@@ -125,6 +125,7 @@
 
       home.file.".config/hypr/hyprland.conf".source = ./home/config/hypr/hyprland.conf;
       home.file.".config/hypr/hyprpaper.conf".source = ./home/config/hypr/hyprpaper.conf;
+      home.file.".config/hypr/hypridle.conf".source = ./home/config/hypr/hypridle.conf;
 
       home.file.".config/waybar/config.jsonc".source = ./home/config/waybar/config.jsonc;
       home.file.".config/waybar/style.css".source = ./home/config/waybar/style.css;
