@@ -120,7 +120,7 @@ security.sudo.wheelNeedsPassword = false;
   users.users.lucy = {
 	isNormalUser = true;
 	description = "lucy";
-	extraGroups = [ "networkmanager" "wheel" ];
+	extraGroups = [ "networkmanager" "wheel" "i2c" ];
 	shell = pkgs.fish;
 	packages = with pkgs; [
 	  kdePackages.kate
@@ -188,7 +188,6 @@ programs.steam.enable = true;
 	#nerdfonts
 	#gcc
 	#libvlc
-	#obs-studio
 	#flameshot
 	kdePackages.powerdevil
 	kdePackages.sddm-kcm
@@ -214,10 +213,36 @@ programs.steam.enable = true;
     hypridle
     hyprlock
     dunst
+    SDL2
 	#wine-staging
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
+
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-vkcapture
+    ];
+  };
+    
+
+ # https://nixos.wiki/wiki/OBS_Studio
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+    ddcci-driver
+  ];
+  boot.extraModprobeConfig = ''
+    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+  '';
+  services.udev.enable = true;
+  services.udev.extraRules = ''
+        KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+  '';
+
+  boot.kernelModules = ["i2c-dev" "ddcci_backlight" "v4l2loopback" ];
+  security.polkit.enable = true;
 
   programs.hyprland.enable = true;
 

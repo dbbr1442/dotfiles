@@ -29,7 +29,8 @@
 	
     },
     "pulseaudio": {
-	"format": " {volume}%  "
+	"format": " {volume}%  ",
+    "format-muted": " {volume}%  "
     },
     "tray": {
 	"spacing": 4

@@ -80,25 +80,33 @@
 	    hyfetch
 	    audacious
 	    gimp
-	    obs-studio
 	    flameshot
 	    inkscape
 	    ffmpeg
 	    vlc
 	    mpv
         vscode
-	wofi
-	htop
-	protontricks
-	winetricks
-	cava
-	vesktop
-	gamescope
-	nnn
-	ouch
+    	wofi
+    	htop
+    	protontricks
+    	winetricks
+    	cava
+    	vesktop
+    	gamescope
+    	nnn
+    	ouch
+        blender
+        librewolf
       ];
 
       #environment.variables.EDITOR = "nvim";
+
+    programs.gallery-dl = {
+      enable = true;
+      settings = {
+        extractor.base-directory = "~/Pictures/pinterest";
+      };
+    };
 
       programs.neovim = {
 	enable = true;
