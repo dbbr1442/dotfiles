@@ -193,7 +193,7 @@ programs.steam.enable = true;
 	kdePackages.sddm-kcm
 	ddcutil
 	xdg-desktop-portal
-	xdg-desktop-portal-kde
+	kdePackages.xdg-desktop-portal-kde
 	libvlc
 	libva
 	libva-vdpau-driver
