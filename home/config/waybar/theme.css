@@ -2,7 +2,7 @@
 * Variant: Rosé Pine Moon
 * Maintainer: DankChoir
 */
-
+/*
 @define-color base            #232136;
 @define-color surface         #2a273f;
 @define-color overlay         #393552;
@@ -21,3 +21,24 @@
 @define-color highlightLow    #2a283e;
 @define-color highlightMed    #44415a;
 @define-color highlightHigh   #56526e;
+*/
+
+
+@define-color base            #232323;
+@define-color surface         #2a2a2a;
+@define-color overlay         #383838;
+
+@define-color muted           #6d6d6d;
+@define-color subtle          #8f8f8f;
+@define-color text            #e0e0e0;
+
+@define-color love            #989898;
+@define-color gold            #cbcbcb;
+@define-color rose            #b0b0b0;
+@define-color pine            #858585;
+@define-color foam            #c6c6c6;
+@define-color iris            #b3b3b3;
+
+@define-color highlightLow    #2a2a2a;
+@define-color highlightMed    #434343;
+@define-color highlightHigh   #555555;

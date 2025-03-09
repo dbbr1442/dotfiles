@@ -97,6 +97,9 @@
     	ouch
         blender
         librewolf
+        cmus
+        android-file-transfer
+        rawtherapee
       ];
 
       #environment.variables.EDITOR = "nvim";
@@ -129,7 +132,7 @@
       #};
 
       home.file.".config/kitty/kitty.conf".source = ./home/config/kitty/kitty.conf;
-      home.file.".config/kitty/rose-pine-moon.conf".source = ./home/config/kitty/rose-pine-moon.conf;
+      home.file.".config/kitty/theme.conf".source = ./home/config/kitty/theme.conf;
 
       home.file.".config/hypr/hyprland.conf".source = ./home/config/hypr/hyprland.conf;
       home.file.".config/hypr/hyprpaper.conf".source = ./home/config/hypr/hyprpaper.conf;
@@ -137,11 +140,13 @@
 
       home.file.".config/waybar/config.jsonc".source = ./home/config/waybar/config.jsonc;
       home.file.".config/waybar/style.css".source = ./home/config/waybar/style.css;
-      home.file.".config/waybar/rose-pine-moon.css".source = ./home/config/waybar/rose-pine-moon.css;
+      home.file.".config/waybar/theme.css".source = ./home/config/waybar/theme.css;
 
 	home.file.".config/fish/functions/fish_prompt.fish".source = ./home/config/fish/functions/fish-prompt.fish;
 	home.file.".config/fish/functions/n.fish".source = ./home/config/fish/functions/n.fish;
-	#home.file.".config/fish/config.fish".source = ./home/config/fish/config.fish;
+    home.file.".config/fish/functions/ffmpeg-trim.fish".source = ./home/config/fish/functions/ffmpeg-trim.fish;
+    home.file.".config/fish/functions/restart-waybar.fish".source = ./home/config/fish/functions/restart-waybar.fish;
+    home.file.".config/fish/functions/yt-dlp-preset.fish".source = ./home/config/fish/functions/yt-dlp-preset.fish;
 
 	home.file.".config/cava/config".source = ./home/config/cava/config;
 
@@ -151,6 +156,8 @@
 	home.file.".config/xdg-desktop-portal/hyprland-portals.conf".source = ./home/config/xdg-desktop-portal/hyprland-portals.conf;
 
 	home.file.".config/nvim" = { source = ./home/config/nvim; recursive = true; };
+
+    home.file.".config/cmus/theme.theme".source = ./home/config/cmus/theme.theme;
 	#programs.fish.functions.fish_prompt = {
 #	body = ''
 #
