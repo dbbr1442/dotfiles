@@ -22,7 +22,7 @@ window#waybar {
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @base;
+	background: @surface;
 
 }
 
@@ -34,8 +34,8 @@ window#waybar {
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @base;
-	color: @overlay;
+	background: @surface;
+	color: @muted;
 }
 
 #pulseaudio {
@@ -46,7 +46,7 @@ window#waybar {
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @base;
+	background: @surface;
 	color: @love;
 }
 
@@ -58,7 +58,7 @@ window#waybar {
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @base;
+	background: @surface;
 	color: @muted;
 }
 
@@ -71,7 +71,7 @@ window#waybar {
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @base;
+	background: @surface;
 }
 
 #clock {
@@ -79,19 +79,19 @@ window#waybar {
 }
 
 #memory {
-	border-right: 1px solid @overlay;
+	border-right: 1px solid @highlightHigh;
 	border-radius: 10px 0 0 10px;
 	color: @foam;
 }
 
 #tray {
-	padding-right: 10px;
-	border-right: 1px solid @overlay;
+	padding-right: 9px;
+	border-right: 1px solid @highlightHigh;
 	border-radius: 10px 0 0 10px;
 }
 
 #temperature {
-	border-right: 1px solid @overlay;
+	border-right: 1px solid @highlightHigh;
 	border-radius: 10px 0 0 10px;
 	color: @rose;
 }
@@ -110,6 +110,23 @@ window#waybar {
 	color: @text;
 	border-radius: 0px;
 	border: 2px solid @rose;
+}
+
+#mpris {
+    margin-top: 20px;
+	margin-left: 0px;
+	margin-right: 5px;
+	padding-left: 12px;
+	padding-right: 5px;
+	margin-bottom: 0;
+	border-radius: 0px;
+	transition: none;
+	background: @surface;
+    color: @pine;
+}
+
+#mpris.paused {
+    color: @muted;
 }
 
 
