@@ -159,6 +159,7 @@
 
     home.file.".config/cmus/theme.theme".source = ./home/config/cmus/theme.theme;
     home.file.".config/fish/functions/set-wallpaper.fish".source = ./home/config/fish/functions/set-wallpaper.fish;
+    home.file.".config/hypr/set-wallpaper.fish".source = ./home/config/hypr/set-wallpaper.fish;
 	#programs.fish.functions.fish_prompt = {
 #	body = ''
 #
