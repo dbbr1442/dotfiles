@@ -17,36 +17,36 @@ window#waybar {
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 5px;
-	padding-left: 12px;
-	padding-right: 5px;
+	padding-left: 14px;
+	padding-right: 14px;
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @surface;
+	background: @base;
 
 }
 
 #workspaces {
 	margin-top: 20px;
 	margin-left: 5px;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @surface;
+	background: @base;
 	color: @muted;
 }
 
 #pulseaudio {
 	margin-top: 20px;
 	margin-right: 5px;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 13px;
+	padding-right: 14px;
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @surface;
+	background: @base;
 	color: @love;
 }
 
@@ -58,7 +58,7 @@ window#waybar {
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @surface;
+	background: @base;
 	color: @muted;
 }
 
@@ -66,26 +66,28 @@ window#waybar {
 	margin-top: 20px;
 	margin-right: 20px;
 	margin-left: 5px;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 14px;
+	padding-right: 14px;
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @surface;
+	background: @base;
 }
 
 #clock {
 	color: @gold;
+    padding-left: 14px;
 }
 
 #memory {
 	border-right: 1px solid @highlightHigh;
 	border-radius: 10px 0 0 10px;
 	color: @foam;
+    padding-right: 14px;
 }
 
 #tray {
-	padding-right: 9px;
+	padding-right: 14px;
 	border-right: 1px solid @highlightHigh;
 	border-radius: 10px 0 0 10px;
 }
@@ -94,10 +96,13 @@ window#waybar {
 	border-right: 1px solid @highlightHigh;
 	border-radius: 10px 0 0 10px;
 	color: @rose;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 
 #cpu {
 	color: @iris;
+    padding-left: 14px;
 }
 
 #workspaces button {
@@ -116,12 +121,12 @@ window#waybar {
     margin-top: 20px;
 	margin-left: 0px;
 	margin-right: 5px;
-	padding-left: 12px;
-	padding-right: 5px;
+	padding-left: 14px;
+	padding-right: 7px;
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
-	background: @surface;
+	background: @base;
     color: @pine;
 }
 
