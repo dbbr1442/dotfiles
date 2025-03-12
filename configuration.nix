@@ -73,24 +73,23 @@ security.sudo.wheelNeedsPassword = false;
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  #services.displayManager.sddm.enable = true;
+services.displayManager.ly.enable = true;
 
-  services.xserver.displayManager.sddm.settings = {
-	Theme = {
-		Current = "breeze";
-		ThemeDir = "/sddmt";
-	};
-  };
+#  services.xserver.displayManager.sddm.settings = {
+#	Theme = {
+#		Current = "breeze";
+#		ThemeDir = "/sddmt";
+#	};
+#  };
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-	layout = "us";
-	variant = "";
-  };
+ # services.xserver.xkb = {
+#	layout = "us";
+#	variant = "";
+ # };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -133,6 +132,7 @@ security.sudo.wheelNeedsPassword = false;
 	users = {
 		"lucy" = import ./home.nix;
 	};
+    backupFileExtension = "bak";
   };
 
   # Install firefox.
@@ -151,7 +151,7 @@ services.xserver.videoDrivers = ["nvidia"];
 hardware.graphics = { 
 	enable = true;
 	extraPackages = with pkgs; [
-		libvdpau-va-gl
+		#libvdpau-va-gl
 
 	];
 };
@@ -176,45 +176,36 @@ programs.steam.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-	wget
-	git
-  	#neofetch
-	#hyfetch
-  	#neovim
-	#audacious
-	#gimp
-	#libgcc
-	#nerdfonts
-	#gcc
-	#libvlc
-	#flameshot
-	kdePackages.powerdevil
-	kdePackages.sddm-kcm
-	ddcutil
-	xdg-desktop-portal
-	kdePackages.xdg-desktop-portal-kde
-	libvlc
-	libva
-	libva-vdpau-driver
-	xclip
-	kitty
-	hyprpaper
-	playerctl
-	hyprpolkitagent
-	wl-clip-persist
-	wl-clipboard
-	cliphist
-	waybar
-	waybar-mpris
-	networkmanagerapplet
-	slurp
-	grim
-    hypridle
-    hyprlock
-    dunst
-    SDL2
-	#wine-staging
+  environment.systemPackages = [
+	pkgs.wget
+	pkgs.git
+	pkgs.kdePackages.powerdevil
+	pkgs.kdePackages.sddm-kcm
+	pkgs.ddcutil
+	pkgs.xdg-desktop-portal
+	pkgs.kdePackages.xdg-desktop-portal-kde
+	pkgs.libvlc
+	pkgs.libva
+	pkgs.libva-vdpau-driver
+	pkgs.xclip
+	pkgs.kitty
+	pkgs.hyprpaper
+	pkgs.playerctl
+	pkgs.hyprpolkitagent
+	pkgs.wl-clip-persist
+	pkgs.wl-clipboard
+	pkgs.cliphist
+	pkgs.waybar
+	pkgs.waybar-mpris
+	pkgs.networkmanagerapplet
+	pkgs.slurp
+	pkgs.grim
+    pkgs.hypridle
+    pkgs.hyprlock
+    pkgs.dunst
+    pkgs.SDL2
+    pkgs.hyprcursor
+    pkgs.rose-pine-cursor
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];

@@ -22,16 +22,37 @@
 	# Home Manager is pretty good at managing dotfiles. The primary way to manage
 	# plain files is through 'home.file'.
 	home.file = {
-		# # Building this configuration will create a copy of 'dotfiles/screenrc' in
-		# # the Nix store. Activating the configuration will then make '~/.screenrc' a
-		# # symlink to the Nix store copy.
-		# ".screenrc".source = dotfiles/screenrc;
+        ".config/kitty/kitty.conf".source = ./home/config/kitty/kitty.conf;
+        ".config/kitty/theme.conf".source = ./home/config/kitty/theme.conf;
 
-		# # You can also set the file content immediately.
-		# ".gradle/gradle.properties".text = ''
-		#   org.gradle.console=verbose
-		#   org.gradle.daemon.idletimeout=3600000
-		# '';
+        ".config/hypr/hyprland.conf".source = ./home/config/hypr/hyprland.conf;
+        ".config/hypr/hyprpaper.conf".source = ./home/config/hypr/hyprpaper.conf;
+        ".config/hypr/hypridle.conf".source = ./home/config/hypr/hypridle.conf;
+
+        ".config/waybar/config.jsonc".source = ./home/config/waybar/config.jsonc;
+        ".config/waybar/style.css".source = ./home/config/waybar/style.css;
+        ".config/waybar/theme.css".source = ./home/config/waybar/theme.css;
+
+        ".config/fish/functions/fish_prompt.fish".source = ./home/config/fish/functions/fish-prompt.fish;
+        ".config/fish/functions/n.fish".source = ./home/config/fish/functions/n.fish;
+        ".config/fish/functions/ffmpeg-trim.fish".source = ./home/config/fish/functions/ffmpeg-trim.fish;
+        ".config/fish/functions/restart-waybar.fish".source = ./home/config/fish/functions/restart-waybar.fish;
+        ".config/fish/functions/yt-dlp-preset.fish".source = ./home/config/fish/functions/yt-dlp-preset.fish;
+
+        ".config/cava/config".source = ./home/config/cava/config;
+
+        ".config/wofi/style.css".source = ./home/config/wofi/style.css;
+        ".config/wofi/config".source = ./home/config/wofi/config;
+
+
+        ".config/nvim" = { source = ./home/config/nvim; recursive = true; };
+
+        ".config/cmus/theme.theme".source = ./home/config/cmus/theme.theme;
+        ".config/fish/functions/set-wallpaper.fish".source = ./home/config/fish/functions/set-wallpaper.fish;
+        ".config/gtk-2.0" = { source = ./home/config/gtk-2.0; recursive = true; }; 
+        ".config/gtk-3.0" = { source = ./home/config/gtk-3.0; recursive = true; };
+        ".config/gtk-4.0" = { source = ./home/config/gtk-4.0; recursive = true; };
+
 	};
 
 	# Home Manager can also manage your environment variables through
@@ -100,7 +121,28 @@
         cmus
         android-file-transfer
         rawtherapee
+        hyprcursor
+        rose-pine-cursor
       ];
+
+#      home.pointerCursor = {
+#          hyprcursor = {
+#            enable = true;
+#            size = 24;
+#          };
+#          size = 24;
+#          package = pkgs.rose-pine-cursor;
+#          name = "BreezeX-RoséPine";
+#      };
+#      
+#      gtk = {
+#        enable = true;
+#        cursorTheme = {
+#            package = pkgs.rose-pine-cursor;
+#            name = "BreezeX-RoséPine";
+#            size = 24;
+#        };
+#      };
 
       #environment.variables.EDITOR = "nvim";
 
@@ -131,35 +173,6 @@
 	#
       #};
 
-      home.file.".config/kitty/kitty.conf".source = ./home/config/kitty/kitty.conf;
-      home.file.".config/kitty/theme.conf".source = ./home/config/kitty/theme.conf;
-
-      home.file.".config/hypr/hyprland.conf".source = ./home/config/hypr/hyprland.conf;
-      home.file.".config/hypr/hyprpaper.conf".source = ./home/config/hypr/hyprpaper.conf;
-      home.file.".config/hypr/hypridle.conf".source = ./home/config/hypr/hypridle.conf;
-
-      home.file.".config/waybar/config.jsonc".source = ./home/config/waybar/config.jsonc;
-      home.file.".config/waybar/style.css".source = ./home/config/waybar/style.css;
-      home.file.".config/waybar/theme.css".source = ./home/config/waybar/theme.css;
-
-	home.file.".config/fish/functions/fish_prompt.fish".source = ./home/config/fish/functions/fish-prompt.fish;
-	home.file.".config/fish/functions/n.fish".source = ./home/config/fish/functions/n.fish;
-    home.file.".config/fish/functions/ffmpeg-trim.fish".source = ./home/config/fish/functions/ffmpeg-trim.fish;
-    home.file.".config/fish/functions/restart-waybar.fish".source = ./home/config/fish/functions/restart-waybar.fish;
-    home.file.".config/fish/functions/yt-dlp-preset.fish".source = ./home/config/fish/functions/yt-dlp-preset.fish;
-
-	home.file.".config/cava/config".source = ./home/config/cava/config;
-
-	home.file.".config/wofi/style.css".source = ./home/config/wofi/style.css;
-	home.file.".config/wofi/config".source = ./home/config/wofi/config;
-	
-	home.file.".config/xdg-desktop-portal/hyprland-portals.conf".source = ./home/config/xdg-desktop-portal/hyprland-portals.conf;
-
-	home.file.".config/nvim" = { source = ./home/config/nvim; recursive = true; };
-
-    home.file.".config/cmus/theme.theme".source = ./home/config/cmus/theme.theme;
-    home.file.".config/fish/functions/set-wallpaper.fish".source = ./home/config/fish/functions/set-wallpaper.fish;
-    home.file.".config/hypr/set-wallpaper.fish".source = ./home/config/hypr/set-wallpaper.fish;
 	#programs.fish.functions.fish_prompt = {
 #	body = ''
 #
