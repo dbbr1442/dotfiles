@@ -52,7 +52,7 @@
         ".config/gtk-2.0" = { source = ./home/config/gtk-2.0; recursive = true; }; 
         ".config/gtk-3.0" = { source = ./home/config/gtk-3.0; recursive = true; };
         ".config/gtk-4.0" = { source = ./home/config/gtk-4.0; recursive = true; };
-
+        ".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
 	};
 
 	# Home Manager can also manage your environment variables through
@@ -121,20 +121,47 @@
         cmus
         android-file-transfer
         rawtherapee
-        hyprcursor
-        rose-pine-cursor
+        vanilla-dmz
       ];
 
 #      home.pointerCursor = {
-#          hyprcursor = {
-#            enable = true;
-#            size = 24;
-#          };
+#          x11.enable = true;
 #          size = 24;
 #          package = pkgs.rose-pine-cursor;
 #          name = "BreezeX-RoséPine";
+#          gtk.enable = true;
 #      };
-#      
+
+      home.pointerCursor = {
+          x11.enable = true;
+          size = 24;
+          package = pkgs.vanilla-dmz;
+          name = "Vanilla-DMZ";
+          gtk.enable = true;
+      };
+
+#    home.pointerCursor = 
+#       let 
+#         getFrom = url: hash: name: {
+#             gtk.enable = true;
+#             x11.enable = true;
+#             name = name;
+#             size = 24;
+#             package = 
+#               pkgs.runCommand "moveUp" {} ''
+#                 mkdir -p $out/share/icons
+#                 ln -s ${pkgs.fetchzip {
+#                   url = url;
+#                   hash = hash;
+#                 }} $out/share/icons/${name}
+#             '';
+#           };
+#       in
+#         getFrom 
+#           "https://github.com/rose-pine/cursor/releases/download/v1.1.0/BreezeX-RosePine-Linux.tar.xz"
+#           "sha256-t5xwAPGhuQUfGThedLsmtZEEp1Ljjo3Udhd5Ql3O67c="
+#           "BreezeX-RoséPine";
+      
 #      gtk = {
 #        enable = true;
 #        cursorTheme = {
@@ -143,6 +170,15 @@
 #            size = 24;
 #        };
 #      };
+
+      gtk = {
+        enable = true;
+        cursorTheme = {
+            package = pkgs.vanilla-dmz;
+            name = "Vanilla-DMZ";
+            size = 24;
+        };
+      };
 
       #environment.variables.EDITOR = "nvim";
 
