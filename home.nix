@@ -55,7 +55,6 @@
         ".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
         #".icons/default".source = "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RoséPine";
 
-        ".config/lf/lfrc".source = ./home/config/lf/lfrc;
         ".config/ctpv/config".source = ./home/config/ctpv/config;
 	};
 
@@ -140,8 +139,11 @@
             &${pkgs.ctpv}/bin/ctpv -s $id
             cmd on-quit %${pkgs.ctpv}/bin/ctpv -e $id
             set cleaner ${pkgs.ctpv}/bin/ctpvclear
+            set sixel true
+            set icons
+            set shell fish
           '';
-        }
+        };
 
 
       home.pointerCursor = {
