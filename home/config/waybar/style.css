@@ -41,7 +41,7 @@ window#waybar {
 #pulseaudio {
 	margin-top: 20px;
 	margin-right: 5px;
-	padding-left: 13px;
+	padding-left: 14px;
 	padding-right: 14px;
 	margin-bottom: 0;
 	border-radius: 0px;
@@ -53,8 +53,8 @@ window#waybar {
 #pulseaudio.muted {
     margin-top: 20px;
 	margin-right: 5px;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 14px;
+	padding-right: 14px;
 	margin-bottom: 0;
 	border-radius: 0px;
 	transition: none;
