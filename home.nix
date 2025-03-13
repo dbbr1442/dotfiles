@@ -53,6 +53,10 @@
         ".config/gtk-3.0" = { source = ./home/config/gtk-3.0; recursive = true; };
         ".config/gtk-4.0" = { source = ./home/config/gtk-4.0; recursive = true; };
         ".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
+        #".icons/default".source = "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RoséPine";
+
+        ".config/lf/lfrc".source = ./home/config/lf/lfrc;
+        ".config/ctpv/config".source = ./home/config/ctpv/config;
 	};
 
 	# Home Manager can also manage your environment variables through
@@ -122,60 +126,41 @@
         android-file-transfer
         rawtherapee
         vanilla-dmz
+        chafa
+        #rose-pine-cursor
+        lf
       ];
 
-#      home.pointerCursor = {
-#          x11.enable = true;
-#          size = 24;
-#          package = pkgs.rose-pine-cursor;
-#          name = "BreezeX-RoséPine";
-#          gtk.enable = true;
-#      };
+        programs.lf = {
+          previewer = {
+            keybinding = "i";
+            source = "${pkgs.ctpv}/bin/ctpv";
+          };
+          extraConfig = ''
+            &${pkgs.ctpv}/bin/ctpv -s $id
+            cmd on-quit %${pkgs.ctpv}/bin/ctpv -e $id
+            set cleaner ${pkgs.ctpv}/bin/ctpvclear
+          '';
+        }
+
 
       home.pointerCursor = {
           x11.enable = true;
           size = 24;
           package = pkgs.vanilla-dmz;
           name = "Vanilla-DMZ";
+          #package = pkgs.rose-pine-cursor;
+          #name = "BreezeX-RoséPine";
           gtk.enable = true;
       };
-
-#    home.pointerCursor = 
-#       let 
-#         getFrom = url: hash: name: {
-#             gtk.enable = true;
-#             x11.enable = true;
-#             name = name;
-#             size = 24;
-#             package = 
-#               pkgs.runCommand "moveUp" {} ''
-#                 mkdir -p $out/share/icons
-#                 ln -s ${pkgs.fetchzip {
-#                   url = url;
-#                   hash = hash;
-#                 }} $out/share/icons/${name}
-#             '';
-#           };
-#       in
-#         getFrom 
-#           "https://github.com/rose-pine/cursor/releases/download/v1.1.0/BreezeX-RosePine-Linux.tar.xz"
-#           "sha256-t5xwAPGhuQUfGThedLsmtZEEp1Ljjo3Udhd5Ql3O67c="
-#           "BreezeX-RoséPine";
-      
-#      gtk = {
-#        enable = true;
-#        cursorTheme = {
-#            package = pkgs.rose-pine-cursor;
-#            name = "BreezeX-RoséPine";
-#            size = 24;
-#        };
-#      };
 
       gtk = {
         enable = true;
         cursorTheme = {
             package = pkgs.vanilla-dmz;
             name = "Vanilla-DMZ";
+            #package = pkgs.rose-pine-cursor;
+            #name = "BreezeX-RoséPine";
             size = 24;
         };
       };

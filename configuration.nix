@@ -122,8 +122,6 @@ services.displayManager.ly.enable = true;
 	extraGroups = [ "networkmanager" "wheel" "i2c" ];
 	shell = pkgs.fish;
 	packages = with pkgs; [
-	  kdePackages.kate
-	#  thunderbird
 	];
   };
 
