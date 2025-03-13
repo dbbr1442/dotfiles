@@ -54,8 +54,10 @@
         ".config/gtk-4.0" = { source = ./home/config/gtk-4.0; recursive = true; };
         ".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
         #".icons/default".source = "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RoséPine";
+        ".config/lf/lfrc".source = ./home/config/lf/lfrc;
+        ".config/lf/cleaner".source = ./home/config/lf/cleaner;
+        ".config/lf/previewer".source = ./home/config/lf/previewer;
 
-        ".config/ctpv/config".source = ./home/config/ctpv/config;
 	};
 
 	# Home Manager can also manage your environment variables through
@@ -125,25 +127,26 @@
         android-file-transfer
         rawtherapee
         vanilla-dmz
-        chafa
-        #rose-pine-cursor
+        pistol
         lf
+        #rose-pine-cursor
       ];
 
-        programs.lf = {
-          previewer = {
-            keybinding = "i";
-            source = "${pkgs.ctpv}/bin/ctpv";
-          };
-          extraConfig = ''
-            &${pkgs.ctpv}/bin/ctpv -s $id
-            cmd on-quit %${pkgs.ctpv}/bin/ctpv -e $id
-            set cleaner ${pkgs.ctpv}/bin/ctpvclear
-            set sixel true
-            set icons
-            set shell fish
-          '';
-        };
+#        programs.lf = {
+#            enable = true;
+#          previewer = {
+#            keybinding = "i";
+#            source = "${pkgs.ctpv}/bin/ctpv";
+#          };
+#          extraConfig = ''
+#            &${pkgs.ctpv}/bin/ctpv -s $id
+#            cmd on-quit %${pkgs.ctpv}/bin/ctpv -e $id
+#            set cleaner ${pkgs.ctpv}/bin/ctpvclear
+#            set sixel true
+#            set icons
+#            set shell fish
+#          '';
+#        };
 
 
       home.pointerCursor = {
