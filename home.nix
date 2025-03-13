@@ -57,7 +57,8 @@
         ".config/lf/lfrc".source = ./home/config/lf/lfrc;
         ".config/lf/cleaner".source = ./home/config/lf/cleaner;
         ".config/lf/preview".source = ./home/config/lf/preview;
-        ".config/lf/lfub".source = ./home/config/lf/lfub;
+        ".config/lf/lfub/lfub".source = ./home/config/lf/lfub/lfub;
+
 
 	};
 
@@ -93,7 +94,10 @@
 	    shellAliases = {
 		    "neofetch" = "hyfetch";
 	    };
-	    shellInit = "set -x EDITOR nvim";
+	    shellInit = ''
+        set -x EDITOR nvim
+        fish_add_path $HOME/.config/lf/lfub;
+        '';
 	    
 	};
 	
