@@ -57,7 +57,9 @@
         ".config/lf/lfrc".source = ./home/config/lf/lfrc;
         ".config/lf/cleaner".source = ./home/config/lf/cleaner;
         ".config/lf/preview".source = ./home/config/lf/preview;
-        ".config/lf/lfub/lfub".source = ./home/config/lf/lfub/lfub;
+        ".config/fish/functions/other" = { source = ./home/config/fish/functions/other; recursive = true; };
+        ".config/fish/functions/lfub.fish".source = ./home/config/fish/functions/lfub.fish;
+        #".config/lf/lfub/lfub".source = ./home/config/lf/lfub/lfub;
 
 
 	};
