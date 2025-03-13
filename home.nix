@@ -56,7 +56,7 @@
         #".icons/default".source = "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RoséPine";
         ".config/lf/lfrc".source = ./home/config/lf/lfrc;
         ".config/lf/cleaner".source = ./home/config/lf/cleaner;
-        ".config/lf/previewer".source = ./home/config/lf/previewer;
+        ".config/lf/preview".source = ./home/config/lf/preview;
         ".config/lf/lfub".source = ./home/config/lf/lfub;
 
 	};

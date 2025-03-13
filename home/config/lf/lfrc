@@ -1,5 +1,5 @@
 set icons
 set shell fish
-set previewer ~/.config/lf/previewer
+set previewer ~/.config/lf/preview
 set cleaner ~/.config/lf/cleaner
 
