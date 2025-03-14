@@ -14,9 +14,5 @@
 function lfc --wraps="lf" --description="lf - Terminal file manager (changing directory on exit using lfub)"
     # `command` is needed in case `lfcd` is aliased to `lf`.
     # Quotes will cause `cd` to not change directory if `lf` prints nothing to stdout due to an error.
-    command touch "/tmp/lfcdfile.tmp";
-    lfub "$argv"
-    builtin cd $(cat "/tmp/lfcdfile.tmp")
-    command rm -f "/tmp/lfcdfile.tmp"
-
+    cd "$(command sh "$HOME/.config/fish/functions/other/lfub" -print-last-dir $argv)"
 end
