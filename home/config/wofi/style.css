@@ -62,7 +62,7 @@ window {
 } 
 
 #entry:selected {
-    background-color: @highlightMed;
+    background-color: @base;
     color: @text;
     outline: none;
     /*border-radius: 10px;*/
@@ -70,7 +70,7 @@ window {
 }
 
 #entry:selected * {
-    background-color: @highlighMed;
+    background-color: @base;
     color: @text;
     border-radius: 0px;
     outline: none;

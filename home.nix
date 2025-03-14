@@ -60,7 +60,7 @@
         ".config/fish/functions/other" = { source = ./home/config/fish/functions/other; recursive = true; };
         ".config/fish/functions/lfub.fish".source = ./home/config/fish/functions/lfub.fish;
         #".config/lf/lfub/lfub".source = ./home/config/lf/lfub/lfub;
-        ".config/dunst/dunstrc/dunstrc.d/50-theme.conf".source = ./home/config/dunst/dunstrc.d/50-theme.conf;
+        ".config/dunst/dunstrc.d/50-theme.conf".source = ./home/config/dunst/dunstrc.d/50-theme.conf;
 
 
 	};
