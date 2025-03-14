@@ -23,6 +23,7 @@ window {
     color: @text;
     font-family: 'JetBrainsMono NFP';
     font-size: 14px;
+    border: 2px solid @rose;
 }
 
 #input {
@@ -74,3 +75,4 @@ window {
     border-radius: 0px;
     outline: none;
 }
+#input:focus {box-shadow: none;} 

@@ -21,5 +21,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>cc", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float);
 
 vim.o.clipboard = "unnamedplus"
+
