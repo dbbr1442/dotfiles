@@ -28,4 +28,6 @@ function lfub --wraps lf
         lf "$argv"
     end
 
+    command pkill ueberzugpp
+
 end

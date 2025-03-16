@@ -59,7 +59,11 @@ window {
     margin: 5px;
     border: none;
     color: @text;
-} 
+}
+
+#entry * {
+    color: @muted;
+}
 
 #entry:selected {
     background-color: @base;

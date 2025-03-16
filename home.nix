@@ -49,10 +49,10 @@
 
         ".config/cmus/theme.theme".source = ./home/config/cmus/theme.theme;
         ".config/fish/functions/set-wallpaper.fish".source = ./home/config/fish/functions/set-wallpaper.fish;
-        ".config/gtk-2.0" = { source = ./home/config/gtk-2.0; recursive = true; }; 
-        ".config/gtk-3.0" = { source = ./home/config/gtk-3.0; recursive = true; };
-        ".config/gtk-4.0" = { source = ./home/config/gtk-4.0; recursive = true; };
-        ".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
+       # ".config/gtk-2.0" = { source = ./home/config/gtk-2.0; recursive = true; }; 
+       # ".config/gtk-3.0" = { source = ./home/config/gtk-3.0; recursive = true; };
+       # ".config/gtk-4.0" = { source = ./home/config/gtk-4.0; recursive = true; };
+        #".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
         #".icons/default".source = "${pkgs.rose-pine-cursor}/share/icons/BreezeX-RoséPine";
         ".config/lf/lfrc".source = ./home/config/lf/lfrc;
         ".config/lf/cleaner".source = ./home/config/lf/cleaner;
@@ -62,7 +62,8 @@
         ".config/fish/functions/lfc.fish".source = ./home/config/fish/functions/lfc.fish;
         #".config/lf/lfub/lfub".source = ./home/config/lf/lfub/lfub;
         ".config/dunst/dunstrc.d/50-theme.conf".source = ./home/config/dunst/dunstrc.d/50-theme.conf;
-
+        ".icons/rose-pine-moon-icons".source = "${pkgs.rose-pine-icon-theme}/share/icons/rose-pine-moon";
+        #".themes/rose-pine-moon-gtk".source = "${pkgs.rose-pine-gtk-theme}/share/themes/rose-pine-moon";
 
 	};
 
@@ -135,11 +136,14 @@
         cmus
         android-file-transfer
         rawtherapee
-        vanilla-dmz
+        #vanilla-dmz
         pistol
         lf
         file
         ueberzugpp
+        kdePackages.konsole
+        #rose-pine-gtk-theme
+        #rose-pine-icon-theme
         #rose-pine-cursor
       ];
 
@@ -179,6 +183,17 @@
             #name = "BreezeX-RoséPine";
             size = 24;
         };
+        gtk3.extraConfig = {
+            gtk-application-prefer-dark-theme = true;
+        };
+        gtk4.extraConfig = {
+            gtk-application-prefer-dark-theme = true;
+        };
+#        theme = { 
+#            package = pkgs.rose-pine-gtk-theme; 
+#            name = "rose-pine-moon-gtk"; 
+#        };
+        iconTheme = { package = pkgs.rose-pine-icon-theme; name = "rose-pine-moon-icons"; };
       };
 
       #environment.variables.EDITOR = "nvim";

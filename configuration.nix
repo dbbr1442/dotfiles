@@ -38,8 +38,10 @@ security.sudo.wheelNeedsPassword = false;
   # Set your time zone.
   time.timeZone = "America/Denver";
 
-  i18n.consoleKeyMap = "us";
-  i18n.consoleFont = "Lat2-Terminus16";
+  #i18n.consoleKeyMap = "us";
+  console.keyMap = "us";
+  console.font = "Lat2-Terminus16";
+  #i18n.consoleFont = "Lat2-Terminus16";
 
   fonts.packages = with pkgs; [
 	noto-fonts
@@ -95,7 +97,8 @@ services.displayManager.ly.enable = true;
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  # hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
 	enable = true;
