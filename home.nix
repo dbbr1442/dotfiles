@@ -211,7 +211,7 @@
 	vimAlias = true;
 
 	plugins = [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ];
-	extraPackages = with pkgs; [ lua-language-server rust-analyzer clang-tools ];
+	extraPackages = with pkgs; [ lua-language-server rust-analyzer clang-tools nixd ];
       };
 
  #     services.hyprpaper = {

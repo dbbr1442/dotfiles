@@ -15,6 +15,7 @@
 			#nixvim' = nixvim.legacyPackages.${system};
 			#nvim = nixvim'.makeNixvim config;
 		in {
+        formatter.system = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 		nixosConfigurations = {
 			nixos = nixpkgs.lib.nixosSystem {
 				inherit system;
