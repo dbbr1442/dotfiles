@@ -30,7 +30,6 @@
         pkgs.SDL2
         pkgs.steam
         pkgs.hyprland
-        pkgs.fish
         pkgs.firefox
     ];
     

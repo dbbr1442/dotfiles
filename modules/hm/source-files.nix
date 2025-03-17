@@ -1,7 +1,8 @@
 { config, pkgs, inputs, ... }:
 let
   home-files-source = ./source-files-directory/home;
-in {
+in 
+{
 
 #    home.file = {
 #        ".config/kitty/kitty.conf".source = ./home/config/kitty/kitty.conf;
@@ -47,7 +48,7 @@ in {
 #        ".config/dunst/dunstrc.d/50-theme.conf".source = ./home/config/dunst/dunstrc.d/50-theme.conf;
 #        ".icons/rose-pine-moon-icons".source = "${pkgs.rose-pine-icon-theme}/share/icons/rose-pine-moon";
 #        #".themes/rose-pine-moon-gtk".source = "${pkgs.rose-pine-gtk-theme}/share/themes/rose-pine-moon";
-
+#
 #	};
 
 
