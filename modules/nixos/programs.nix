@@ -28,10 +28,12 @@
         pkgs.hyprlock
         pkgs.dunst
         pkgs.SDL2
-        pkgs.steam
-        pkgs.hyprland
+        #pkgs.steam
         pkgs.firefox
     ];
+
+    programs.hyprland.enable = true;
+    programs.steam.enable = true;
     
     programs.obs-studio = {
         enable = true;

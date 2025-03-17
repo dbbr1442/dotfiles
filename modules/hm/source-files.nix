@@ -6,7 +6,7 @@
 
     home.file = {
         ".config/kitty/kitty.conf".source = ./source-files-directory/home/config/kitty/kitty.conf;
-        #".config/kitty/theme.conf".source = ./source-files-directory/home/config/kitty/theme.conf;
+        ".config/kitty/theme.conf".source = ./source-files-directory/home/config/kitty/theme.conf;
         
 
         ".config/hypr/hyprland.conf".source = ./source-files-directory/home/config/hypr/hyprland.conf;
