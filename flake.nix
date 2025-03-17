@@ -5,7 +5,7 @@
 		home-manager.url = "github:nix-community/home-manager/master";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
 	};
-	outputs = { self, nixpkgs, ... }@inputs: 
+	outputs = { self, nixpkgs, home-manager, ... }@inputs: 
 		let
 			#lib = nixpkgs.lib;
 			system = "x86_64-linux";
@@ -19,10 +19,16 @@
 				modules = [
 					#./configuration.nix no longer used
                     ./modules/nixos/nixos-connector.nix
-                    inputs.home-manager.nixosModules.default # imma be completely honest i have no idea what this does but im to scared to remove it
-				];
-                
+                    #inputs.home-manager.nixosModules.default # imma be completely honest i have no idea what this does but im to scared to remove it
+                    #./modules/hm/hm-connector.nix
+				];         
 			};
 		};
+        homeConfigurations = {
+            "lucy" = home-manager.lib.homeManagerConfiguration {
+                pkgs = import nixpkgs { inherit system; };
+                modules = [ ./modules/hm/hm-connector.nix ];
+            };
+        };
 	};
 }
