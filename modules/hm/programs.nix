@@ -1,0 +1,39 @@
+{ config, pkgs, inputs, ... }:
+{
+    home.packages = with pkgs; [
+	    yt-dlp
+	    neofetch
+	    hyfetch
+	    audacious
+	    gimp
+	    flameshot
+	    inkscape
+	    ffmpeg
+	    vlc
+	    mpv
+        vscode
+        wofi
+        htop
+        protontricks
+        winetricks
+        cava
+        vesktop
+        gamescope
+        nnn
+        ouch
+        blender
+        librewolf
+        cmus
+        android-file-transfer
+        rawtherapee
+        #vanilla-dmz
+        pistol
+        lf
+        file
+        ueberzugpp
+        kdePackages.konsole
+        #rose-pine-gtk-theme
+        #rose-pine-icon-theme
+        #rose-pine-cursor
+    ];
+}

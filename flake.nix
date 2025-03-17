@@ -10,21 +10,16 @@
 			#lib = nixpkgs.lib;
 			system = "x86_64-linux";
 			pkgs = nixpkgs.legacyPackages.${system};
-
-			#config = {};
-			#nixvim' = nixvim.legacyPackages.${system};
-			#nvim = nixvim'.makeNixvim config;
 		in {
         formatter.system = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 		nixosConfigurations = {
-			nixos = nixpkgs.lib.nixosSystem {
+			internal-nix = nixpkgs.lib.nixosSystem {
 				inherit system;
-				#modules = [ ./configuration.nix ];
 				specialArgs = {inherit inputs;};
 				modules = [
-					./configuration.nix
-                    inputs.home-manager.nixosModules.default
-                    #inputs.nixvim.homeManagerModules.nixvim
+					#./configuration.nix no longer used
+                    ./modules/nixos/nixos-connector.nix
+                    inputs.home-manager.nixosModules.default # imma be completely honest i have no idea what this does but im to scared to remove it
 				];
                 
 			};
