@@ -8,7 +8,7 @@
 	    gimp
 	    flameshot
 	    inkscape
-	    ffmpeg
+	    #ffmpeg
 	    vlc
 	    mpv
         vscode
@@ -35,5 +35,7 @@
         #rose-pine-gtk-theme
         #rose-pine-icon-theme
         #rose-pine-cursor
+        kdePackages.kdeconnect-kde
+        qpwgraph
     ];
 }

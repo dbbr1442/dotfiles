@@ -7,6 +7,6 @@
         vimAlias = true;
 
         plugins = [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ];
-        extraPackages = with pkgs; [ lua-language-server rust-analyzer clang-tools nixd ];
+        extraPackages = with pkgs; [ lua-language-server rust-analyzer clang-tools nixd vscode-langservers-extracted ];
     };
 }

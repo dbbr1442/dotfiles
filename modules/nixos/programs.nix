@@ -3,12 +3,11 @@
     environment.systemPackages = [
 	    pkgs.wget
 	    pkgs.git
-	    pkgs.kdePackages.powerdevil
-	    pkgs.kdePackages.sddm-kcm
+	    #pkgs.kdePackages.powerdevil
+	    #pkgs.kdePackages.sddm-kcm
 	    pkgs.ddcutil
 	    pkgs.xdg-desktop-portal
 	    pkgs.kdePackages.xdg-desktop-portal-kde
-	    pkgs.libvlc
 	    pkgs.libva
 	    pkgs.libva-vdpau-driver
 	    pkgs.xclip
@@ -40,6 +39,7 @@
         plugins = with pkgs.obs-studio-plugins; [
             wlrobs
             obs-vkcapture
+            obs-vaapi
         ];
     };
 }
