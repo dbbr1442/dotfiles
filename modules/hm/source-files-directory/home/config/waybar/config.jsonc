@@ -15,7 +15,9 @@
     "mpris": {
         "format": "{dynamic}",
         "interval": 1,
-        "ignore-players": ["firefox", "librewolf"]
+        "ignore-players": ["firefox", "librewolf"],
+        "dynamic-len": 200,
+        "dynamic-importance-order": ["title", "position", "length", "album", "artist"]
     },
     "clock": {
 	"format": "{:%H:%M}",
@@ -54,7 +56,7 @@
     "format-muted": "{volume}% "
     },
     "tray": {
-	"spacing": 4
+	"spacing": 14
     },
 
 

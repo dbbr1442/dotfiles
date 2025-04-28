@@ -36,10 +36,12 @@
     
     programs.obs-studio = {
         enable = true;
-        plugins = with pkgs.obs-studio-plugins; [
-            wlrobs
-            obs-vkcapture
-            obs-vaapi
+        plugins = with pkgs; [
+            obs-studio-plugins.wlrobs
+            obs-studio-plugins.obs-vkcapture
+            obs-studio-plugins.obs-vaapi
+            nv-codec-headers
         ];
+        package = (pkgs.obs-studio.override { cudaSupport = true; });
     };
 }

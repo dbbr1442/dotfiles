@@ -5,7 +5,7 @@
 	    neofetch
 	    hyfetch
 	    audacious
-	    gimp
+        gimp3
 	    flameshot
 	    inkscape
 	    #ffmpeg
@@ -37,5 +37,9 @@
         #rose-pine-cursor
         kdePackages.kdeconnect-kde
         qpwgraph
+        gphoto2
+        gphoto2fs
+        exfat
+        krita
     ];
 }

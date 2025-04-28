@@ -12,7 +12,7 @@
 	boot.initrd.kernelModules = [ ];
 	boot.kernelModules = [ "kvm-intel" ];
 	boot.extraModulePackages = [ ];
-	boot.kernelParams = [ "nvidia.NVReg_EnableGpuFirmware=0" "nvidia-drm.modeset=1" ];
+    boot.kernelPackages = pkgs.linuxPackages_latest;
 
 	fileSystems."/" =
 		{ device = "/dev/disk/by-uuid/e875c60d-2f55-4cd8-8607-cc785a6eb7db";
