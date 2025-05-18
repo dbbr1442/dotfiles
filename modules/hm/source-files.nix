@@ -49,6 +49,11 @@
         ".icons/rose-pine-moon-icons".source = "${pkgs.rose-pine-icon-theme}/share/icons/rose-pine-moon";
         #".themes/rose-pine-moon-gtk".source = "${pkgs.rose-pine-gtk-theme}/share/themes/rose-pine-moon";
 
+        ".config/wezterm/wezterm.lua".source = ./source-files-directory/home/config/wezterm/wezterm.lua;
+        ".config/niri/config.kdl".source = ./source-files-directory/home/config/niri/config.kdl;
+        ".config/fuzzel/fuzzel.ini".source = ./source-files-directory/home/config/fuzzel/fuzzel.ini;
+        ".config/ghostty/config".source = ./source-files-directory/home/config/ghostty/config;
+
 	};
 
 

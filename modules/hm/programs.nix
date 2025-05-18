@@ -41,5 +41,16 @@
         gphoto2fs
         exfat
         krita
+        lunar-client
+        wezterm
+        fuzzel
+        xwayland-satellite
+        mako
+        swaybg
+        swayidle
+        swaylock
+        ghostty
+        prismlauncher
+        xdg-desktop-portal-gtk        
     ];
 }

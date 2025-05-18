@@ -18,6 +18,7 @@
         ./programs.nix
         ./security.nix
         ./users.nix
+        ./single-gpu-passthrough.nix
     ];
 
 
